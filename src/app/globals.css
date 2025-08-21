@@ -1,26 +1,22 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: "NuberNext";
+  src: url('/fonts/NuberNextCompressed-Heavy-BF63c8a09d47a53.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "Mona Sans";
+  src: url('/fonts/Mona-Sans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  --font-nubernext: NuberNext, "sans-serif";
+  --font-monasans: Mona Sans, "sans-serif";
+  --color-custom-blue: #0031fe;
+  --color-custom-yellow: #f3ff00;
+  --color-custom-dark-red: #b1124e;
+  --color-custom-grey: #ececec;
 }
