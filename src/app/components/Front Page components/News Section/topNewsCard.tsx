@@ -1,6 +1,6 @@
 import React from "react"
 import Image from "next/image"
-import { Article } from "../utils/sampleArticles"
+import { Article } from "../../../utils/sampleArticles"
 
 interface TopNewsCardProps {
   news: Article
@@ -39,10 +39,10 @@ const TopNewsCard = ({ news }: TopNewsCardProps) => {
           <p className="text-lg text-black/50">{getTimeAgo(news.releaseTime)}</p>
         </div>
         <div id="main-news-image">
-          <img src={news.image} alt={news.headline} className="mt-5 w-full" />
+          <Image src={news.image} alt={news.headline} className="mt-5 w-full" width={500} height={500} />
         </div>
         <div id="main-news-text">
-          <p className="text-lg mt-[17px]">{news.description}</p>
+          <p className="text-[16px] mt-[17px]">{news.description}</p>
         </div>
       </a>
     </div>
