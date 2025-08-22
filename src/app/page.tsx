@@ -1,9 +1,25 @@
 import News from "./sections/news";
+import EditorsPicks from "./sections/editorsPicks";
+import Sports from "./sections/sports";
+import Feature from "./sections/feature";
+import LatestPhotos from "./sections/latestPhotos"
 
 export default function Home() {
   return (
-    <div className="font-monasans px-6">
+    <div className="flex flex-col font-monasans px-6 gap-y-9">
       <News />
+      <EditorsPicks />
+      <div className="flex w-full items-start mb-24">
+        <div className="w-1/3">
+          <Sports />
+        </div>
+        <div className="w-1/3">
+          <Feature />
+        </div>
+        <div className="w-1/3">
+          <LatestPhotos />
+        </div>
+      </div>
     </div>
   );
 }

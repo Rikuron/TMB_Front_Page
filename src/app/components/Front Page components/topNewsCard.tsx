@@ -1,6 +1,6 @@
 import React from "react"
 import Image from "next/image"
-import { Article } from "../../../utils/sampleArticles"
+import { Article } from "../../utils/sampleArticles"
 
 interface TopNewsCardProps {
   news: Article

@@ -1,0 +1,28 @@
+import React from "react"
+import GenericNewsCard from "../components/Front Page components/genericNewsCard"
+import HeadlineOnlyCard from "../components/Front Page components/headlineOnlyCard"
+import { sampleArticles } from "../utils/sampleArticles"
+
+const Sports = () => {
+  return (
+    <div id="sports">
+      <div className="flex items-center space-x-2 mb-2 pl-1">
+        <span className="w-[3.5px] h-[40px] bg-custom-dark-red inline-block" />
+        <p className="text-4xl align-middle font-nubernext font-bold text-black hover:text-custom-dark-red hover:cursor-pointer transition duration-700 ease-in-out">Sports</p>
+      </div>
+      <div>
+        <GenericNewsCard news={sampleArticles[12]} headlineSize="text-[16px]" />
+      </div>
+      <div>
+        {sampleArticles.slice(13, 16).map((article)=> (
+          <React.Fragment key={article.id}>
+            <hr className="border border-black mx-4" />
+            <HeadlineOnlyCard news={article} font={"font-light"} />
+          </React.Fragment>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+export default Sports
