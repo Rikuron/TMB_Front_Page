@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="flex flex-col font-monasans px-6 gap-y-9">
       <News />
-      <EditorsPicks />
+      {/* <EditorsPicks /> */}
       <div className="flex w-full items-start mb-24">
         <div className="w-1/3">
           <Sports />

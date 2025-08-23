@@ -14,17 +14,32 @@ const navItems = [
 
 const Header = forwardRef<HTMLElement>((props, headerRef) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const toggleMobileMenu = () => { setIsMobileMenuOpen(!isMobileMenuOpen) }
-  const closeMobileMenu = () => { setIsMobileMenuOpen(false) }
+
+  const toggleMobileMenu = () => { 
+    const newState = !isMobileMenuOpen
+    setIsMobileMenuOpen(newState)
+    
+    // Control body scroll
+    if (newState) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+  }
+  
+  const closeMobileMenu = () => { 
+    setIsMobileMenuOpen(false)
+    document.body.style.overflow = 'unset' 
+  }
 
   return (
     <>
-      <header ref={headerRef} className="fixed flex border-b-4 bg-white border-black shadow-md shadow-black/10 z-50 w-full h-auto px-6 py-4 items-center justify-between">
+      <header ref={headerRef} className="fixed flex border-b-4 bg-white border-black shadow-md shadow-black/10 z-50 w-full h-auto px-9.5 py-2 md:px-6 md:py-4 items-center justify-between">
         <div className="logos flex items-center justify-between space-x-2.5">
-          <div className="tmb-logo">
+          <div className="tmb-logo md:w-auto md:h-auto">
             <Image src="/images/tmb_logo_black.png" alt="The Motherboard Logo" width={35} height={35} />
           </div>
-          <div className="tmb-wordmark">
+          <div className="tmb-wordmark md:w-auto md:h-auto w-[175px]">
             <Image src="/images/tmb_wordmark.png" alt="The Motherboard Wordmark" width={250} height={250} />
           </div>
         </div>
@@ -78,7 +93,7 @@ const Header = forwardRef<HTMLElement>((props, headerRef) => {
           <div className="flex items-center justify-between p-6 border-b border-gray-200">
             <h2 className="text-lg font-semibold font-monasans">Menu</h2>
             <IoClose 
-              className="text-2xl cursor-pointer hover:text-custom-blue transition-colors duration-200"
+              className="text-2xl mr-3 cursor-pointer hover:text-custom-blue transition-colors duration-200"
               onClick={closeMobileMenu}
             />
           </div>
