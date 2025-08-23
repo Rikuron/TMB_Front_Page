@@ -11,9 +11,11 @@ const Feature = () => {
         <p className="text-5xl md:text-4xl align-middle font-nubernext font-bold text-black hover:cursor-pointer">Feature</p>
       </div>
       <div>
+        {/* Render 1 article from sampleArticles.ts */}
         <GenericNewsCard news={sampleArticles[16]} headlineSize="text-lg" />
       </div>
       <div>
+        {/* Render 3 articles from sampleArticles.ts */}
         {sampleArticles.slice(17, 20).map((article) => (
           <React.Fragment key={article.id}>
             <hr className="border border-black mx-4" />

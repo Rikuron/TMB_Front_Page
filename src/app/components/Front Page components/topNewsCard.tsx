@@ -6,6 +6,15 @@ interface TopNewsCardProps {
   news: Article
 }
 
+/**
+ * Calculate relative time from a given date to now
+ * 
+ * Converts a timestamp into human-readable relative time format.
+ * Examples: "5 minutes ago", "2 hours ago", "3 days ago"
+ * 
+ * @param date - The date to calculate time difference from
+ * @returns Human-readable time difference string
+ */
 const getTimeAgo = (date: Date): string => {
   const now = new Date()
   const diffInSeconds = Math.floor((now.getTime() - date.getTime()) / 1000)
@@ -30,7 +39,7 @@ const getTimeAgo = (date: Date): string => {
 
 const TopNewsCard = ({ news }: TopNewsCardProps) => {
   return (
-    <div id="main-news-container" className="w-full z-100 bg-white p-4 rounded-lg hover:scale-105 hover:shadow-[0_0_8px_2px_rgba(0,0,0,0.2)] hover:rounded-lg hover:cursor-pointer transition duration-500 ease-in-out">
+    <div className="w-full z-100 bg-white p-4 rounded-lg hover:scale-105 hover:shadow-[0_0_8px_2px_rgba(0,0,0,0.2)] hover:rounded-lg hover:cursor-pointer transition duration-500 ease-in-out">
       <a href="#">
         <div id="main-news-headline">
           <p className="text-4xl font-semibold leading-9">{news.headline}</p>

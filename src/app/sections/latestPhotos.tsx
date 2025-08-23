@@ -14,6 +14,7 @@ const LatestPhotos = () => {
         <GenericNewsCard news={sampleArticles[20]} headlineSize="text-lg" />
       </div>
       <div className="grid grid-cols-2">
+        {/* Render 4 articles from sampleArticles.ts */}
         {sampleArticles.slice(21, 25).map((article) => (
           <ImageOnlyCard key={article.id} news={article} />
         ))}

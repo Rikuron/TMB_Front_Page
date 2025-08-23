@@ -34,7 +34,9 @@ const Header = forwardRef<HTMLElement>((props, headerRef) => {
 
   return (
     <>
+      {/* Desktop Header */}
       <header ref={headerRef} className="fixed flex border-b-4 bg-white border-black shadow-md shadow-black/10 z-50 w-full h-auto px-9.5 py-2 md:px-6 md:py-4 items-center justify-between">
+        {/* Logo Div */}
         <div className="logos flex items-center space-x-2.5">
           <div className="tmb-logo md:w-auto md:h-auto">
             <Image src="/images/tmb_logo_black.png" alt="The Motherboard Logo" width={35} height={35} />
@@ -43,6 +45,8 @@ const Header = forwardRef<HTMLElement>((props, headerRef) => {
             <Image src="/images/tmb_wordmark.png" alt="The Motherboard Wordmark" width={250} height={250} />
           </div>
         </div>
+
+        {/* Nav and Search Div */}
         <div className="flex items-center justify-between space-x-4">
           {/* Desktop Navigation */}
           <nav className="nav-container hidden md:block">
@@ -162,6 +166,7 @@ const Header = forwardRef<HTMLElement>((props, headerRef) => {
   )
 })
 
+// Required for forwardRef component
 Header.displayName = "Header"
 
 export default Header

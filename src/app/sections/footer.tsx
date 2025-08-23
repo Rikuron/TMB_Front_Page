@@ -59,6 +59,7 @@ const Footer = () => {
           <p className="text-[13px] md:ml-[-75px] md:mt-[100px]">FOLLOW THE MOTHERBOARD</p>
           <div className="flex space-x-8 md:ml-[-75px]">
             {footerSocMedLinks.map((link, index) => {
+              // Get the icon component from the link.logo
               const IconComponent = link.logo
               return (
                 <a key={index} href={link.href} target="_blank" rel="noopener noreferrer">

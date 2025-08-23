@@ -6,6 +6,7 @@ import { useHeaderHeight } from "../hooks/useHeaderHeight";
 import Footer from "../sections/footer";
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
+  // Get Header height for dynamic spacing between header and main content
   const headerRef = useRef<HTMLDivElement>(null);
   const headerHeight = useHeaderHeight(headerRef);
 

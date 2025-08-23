@@ -11,9 +11,11 @@ const Sports = () => {
         <p className="text-5xl md:text-4xl  align-middle font-nubernext font-bold text-black hover:text-custom-dark-red hover:cursor-pointer transition duration-700 ease-in-out">Sports</p>
       </div>
       <div>
+        {/* Render 1 article from sampleArticles.ts */}
         <GenericNewsCard news={sampleArticles[12]} headlineSize="text-lg" />
       </div>
       <div>
+        {/* Render 3 articles from sampleArticles.ts */}
         {sampleArticles.slice(13, 16).map((article)=> (
           <React.Fragment key={article.id}>
             <hr className="border border-black mx-4" />

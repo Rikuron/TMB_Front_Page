@@ -10,6 +10,7 @@ const EditorsPicks = () => {
         <p className="text-5xl md:text-4xl align-middle font-nubernext font-bold text-black hover:text-custom-yellow hover:cursor-pointer transition duration-700 ease-in-out">Editor's Picks</p>
       </div>
       <div className="flex flex-col md:flex-row items-center justify-between space-x-2">
+        {/* Render 4 articles from sampleArticles.ts */}
         {sampleArticles.slice(8, 12).map((article) => (
           <GenericNewsCard key={article.id} news={article} headlineSize="text-[16px]" />
         ))}
