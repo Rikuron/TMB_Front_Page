@@ -11,7 +11,7 @@ const Feature = () => {
         <p className="text-4xl align-middle font-nubernext font-bold text-black hover:cursor-pointer">Feature</p>
       </div>
       <div>
-        <GenericNewsCard news={sampleArticles[16]} headlineSize="text-[16px]" />
+        <GenericNewsCard news={sampleArticles[16]} headlineSize="text-lg" />
       </div>
       <div>
         {sampleArticles.slice(17, 20).map((article) => (

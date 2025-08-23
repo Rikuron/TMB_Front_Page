@@ -3,6 +3,7 @@
 import React, { useRef } from "react";
 import Header from "../sections/header";
 import { useHeaderHeight } from "../hooks/useHeaderHeight";
+import Footer from "../sections/footer";
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
   const headerRef = useRef<HTMLDivElement>(null);
@@ -13,6 +14,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
       <div className="relative">
         <Header ref={headerRef} />
         <main style={{ paddingTop: `${headerHeight + 40}px` }}>{children}</main>
+        <Footer />
       </div>
     </body>
   )

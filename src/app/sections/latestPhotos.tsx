@@ -11,7 +11,7 @@ const LatestPhotos = () => {
         <p className="text-4xl align-middle font-nubernext font-bold text-black hover:cursor-pointer">Latest Photos</p>
       </div>
       <div>
-        <GenericNewsCard news={sampleArticles[20]} headlineSize="text-[16px]" />
+        <GenericNewsCard news={sampleArticles[20]} headlineSize="text-lg" />
       </div>
       <div className="grid grid-cols-2">
         {sampleArticles.slice(21, 25).map((article) => (

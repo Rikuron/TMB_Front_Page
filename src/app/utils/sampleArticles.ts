@@ -149,7 +149,7 @@ export const sampleArticles: Article[] = [
   },
   {
     "id": "article-21",
-    "headline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
+    "headline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
     "releaseTime": new Date("2025-05-26T12:00:00"),
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et risus congue quam luctus eleifend varius sit amet metus. Nulla euismod sit amet eros sit amet consectetur. Sed vel imperdiet justo. Ut id mi mollis, finibus urna in, porta metus. Proin quis accumsan",
     "image": "/images/image_placeholder.png"

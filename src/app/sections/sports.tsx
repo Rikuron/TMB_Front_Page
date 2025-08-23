@@ -11,7 +11,7 @@ const Sports = () => {
         <p className="text-4xl align-middle font-nubernext font-bold text-black hover:text-custom-dark-red hover:cursor-pointer transition duration-700 ease-in-out">Sports</p>
       </div>
       <div>
-        <GenericNewsCard news={sampleArticles[12]} headlineSize="text-[16px]" />
+        <GenericNewsCard news={sampleArticles[12]} headlineSize="text-lg" />
       </div>
       <div>
         {sampleArticles.slice(13, 16).map((article)=> (
