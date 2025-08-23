@@ -7,8 +7,8 @@ const Sports = () => {
   return (
     <div id="sports">
       <div className="flex items-center space-x-2 mb-2 pl-1">
-        <span className="w-[3.5px] h-[40px] bg-custom-dark-red inline-block" />
-        <p className="text-4xl align-middle font-nubernext font-bold text-black hover:text-custom-dark-red hover:cursor-pointer transition duration-700 ease-in-out">Sports</p>
+        <span className="w-[5px] h-[57.2px] md:w-[3.5px] md:h-[40px] bg-custom-dark-red inline-block" />
+        <p className="text-5xl md:text-4xl  align-middle font-nubernext font-bold text-black hover:text-custom-dark-red hover:cursor-pointer transition duration-700 ease-in-out">Sports</p>
       </div>
       <div>
         <GenericNewsCard news={sampleArticles[12]} headlineSize="text-lg" />

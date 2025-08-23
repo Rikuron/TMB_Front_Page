@@ -8,15 +8,15 @@ export default function Home() {
   return (
     <div className="flex flex-col font-monasans px-6 gap-y-9">
       <News />
-      {/* <EditorsPicks /> */}
-      <div className="flex w-full items-start mb-24">
-        <div className="w-1/3">
+      <EditorsPicks />
+      <div className="flex flex-col md:flex-row w-full items-start mb-24 gap-y-4 md:gap-y-0">
+        <div className="w-full md:w-1/3">
           <Sports />
         </div>
-        <div className="w-1/3">
+        <div className="w-full md:w-1/3">
           <Feature />
         </div>
-        <div className="w-1/3">
+        <div className="w-full md:w-1/3">
           <LatestPhotos />
         </div>
       </div>

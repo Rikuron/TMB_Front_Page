@@ -6,7 +6,7 @@ import { footerSocMedLinks } from "../utils/footerSocMedLinks"
 const Footer = () => {
   return (
     <footer className="bg-custom-grey pt-[40px] pb-[30px]">
-      <div className="ml-[70px] mr-12 flex flex-col md:flex-row justify-between items-center md:items-start space-y-4 md:space-y-0 md:space-x-4">
+      <div className="mx-8 md:ml-[70px] md:mr-12 flex flex-col md:flex-row justify-between items-center md:items-start space-y-6 md:space-y-0 md:space-x-4">
         
         {/* Footer Logo Section */}
         <div id="footer-logo" className="flex flex-row md:flex-col items-center md:items-start space-x-4 md:space-x-0 md:space-y-4">
@@ -15,13 +15,14 @@ const Footer = () => {
             alt="The Motherboard Logo" 
             width={110} 
             height={110}
-            className="h-[110px]"
+            className="md:w-auto md:h-auto w-[90px] h-[90px]"
           />
           <Image 
             src="/images/Motherboard Text Logo.png" 
             alt="The Motherboard wordmark"
             width={275}
-            height={50}
+            height={62}
+            className="md:w-full md:full w-[200px] h-[45px]"
           />
         </div>
 

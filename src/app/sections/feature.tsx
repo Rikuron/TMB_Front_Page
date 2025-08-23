@@ -7,8 +7,8 @@ const Feature = () => {
   return (
     <div id="feature">
       <div className="flex items-center space-x-2 mb-2 pl-1">
-        <span className="w-[3.5px] h-[40px] bg-black inline-block" />
-        <p className="text-4xl align-middle font-nubernext font-bold text-black hover:cursor-pointer">Feature</p>
+        <span className="w-[5px] h-[57.2px] md:w-[3.5px] md:h-[40px] bg-black inline-block" />
+        <p className="text-5xl md:text-4xl align-middle font-nubernext font-bold text-black hover:cursor-pointer">Feature</p>
       </div>
       <div>
         <GenericNewsCard news={sampleArticles[16]} headlineSize="text-lg" />

@@ -5,10 +5,10 @@ import { IoSearch, IoClose } from "react-icons/io5"
 import { RxHamburgerMenu } from "react-icons/rx"
 
 const navItems = [
-  { label: "NEWS", href: "#news" },
-  { label: "EDITORIAL", href: "#editorial" },
+  { label: "NEWS", href: "#news", hoverColor: "text-custom-blue" },
+  { label: "EDITORIAL", href: "#editorial", hoverColor: "text-custom-yellow" },
   { label: "FEATURE", href: "#feature" },
-  { label: "SPORTS", href: "#sports" },
+  { label: "SPORTS", href: "#sports", hoverColor: "text-custom-dark-red" },
   { label: "MORE" }
 ]
 
@@ -35,11 +35,11 @@ const Header = forwardRef<HTMLElement>((props, headerRef) => {
   return (
     <>
       <header ref={headerRef} className="fixed flex border-b-4 bg-white border-black shadow-md shadow-black/10 z-50 w-full h-auto px-9.5 py-2 md:px-6 md:py-4 items-center justify-between">
-        <div className="logos flex items-center justify-between space-x-2.5">
+        <div className="logos flex items-center space-x-2.5">
           <div className="tmb-logo md:w-auto md:h-auto">
             <Image src="/images/tmb_logo_black.png" alt="The Motherboard Logo" width={35} height={35} />
           </div>
-          <div className="tmb-wordmark md:w-auto md:h-auto w-[175px]">
+          <div className="tmb-wordmark md:w-auto md:h-auto w-[55%] h-auto">
             <Image src="/images/tmb_wordmark.png" alt="The Motherboard Wordmark" width={250} height={250} />
           </div>
         </div>
@@ -52,7 +52,7 @@ const Header = forwardRef<HTMLElement>((props, headerRef) => {
                   <a 
                     key={item.label} 
                     href={item.href}
-                    className="hover:text-custom-blue transition-colors duration-200"
+                    className={`hover:${item.hoverColor} transition-colors duration-500`}
                   >
                     {item.label}
                   </a>
@@ -99,7 +99,7 @@ const Header = forwardRef<HTMLElement>((props, headerRef) => {
           </div>
 
           {/* Mobile Navigation Items */}
-          <nav className="flex-1 px-6 py-4">
+          <nav className="px-6 py-4">
             <div className="flex flex-col space-y-6">
               {navItems.map((item) => 
                 item.href? (
@@ -123,6 +123,31 @@ const Header = forwardRef<HTMLElement>((props, headerRef) => {
               )}
             </div>
           </nav>
+
+          {/* Mobile Menu Logos - New Section */}
+          <div className="flex-1 flex flex-col items-center justify-center px-6 py-8">
+            <div className="flex flex-col items-center space-y-4">
+              <div className="tmb-logo">
+                <Image 
+                  src="/images/tmb_logo.png" 
+                  alt="The Motherboard Logo" 
+                  width={110} 
+                  height={110}
+                  className="w-[90px] h-[90px]"
+                />
+              </div>
+              <div className="tmb-wordmark">
+                <Image 
+                  src="/images/Motherboard Text Logo.png"
+                  alt="The Motherboard Wordmark" 
+                  width={275}
+                  height={62}
+                  className="w-[200px] h-[45px]"
+                />
+              </div>
+            </div>
+          </div>
+
 
           {/* Mobile Menu Footer */}
           <div className="p-6 border-t border-gray-200">
